@@ -1,5 +1,11 @@
 <template>
-  <a class="vue-skip-to" :href="to" :tabindex="tabindex">
+  <a
+    class="vue-skip-to"
+    :href="to"
+    :tabindex="tabindex"
+    @focus="$emit('focus')"
+    @blur="$emit('blur')"
+  >
     <slot>{{ text }}</slot>
   </a>
 </template>
